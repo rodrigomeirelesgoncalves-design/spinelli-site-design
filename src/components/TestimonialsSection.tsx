@@ -19,7 +19,7 @@ const testimonials = [
   },
 ];
 
-const ease = [0.2, 0.8, 0.2, 1];
+const ease = [0.2, 0.8, 0.2, 1] as const;
 
 const TestimonialsSection = () => (
   <section id="depoimentos" className="py-24 md:py-32 bg-accent/50">

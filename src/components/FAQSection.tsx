@@ -34,7 +34,7 @@ const faqs = [
   },
 ];
 
-const ease = [0.2, 0.8, 0.2, 1];
+const ease = [0.2, 0.8, 0.2, 1] as const;
 
 const FAQSection = () => (
   <section id="faq" className="py-24 md:py-32">

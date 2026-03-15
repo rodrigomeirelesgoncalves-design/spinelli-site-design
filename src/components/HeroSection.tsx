@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/luciana-hero.jpg";
 
-const ease = [0.2, 0.8, 0.2, 1];
+const ease = [0.2, 0.8, 0.2, 1] as const;
 
 const HeroSection = () => {
   const openWhatsApp = () => {
