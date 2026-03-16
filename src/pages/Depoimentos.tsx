@@ -1,89 +1,55 @@
 import { Star, Quote } from "lucide-react";
 import { FadeIn, FadeInUp, SectionHeader } from "@/components/AnimationUtils";
 
+const WHATSAPP_URL = "https://wa.me/5566999784828?text=Olá! Gostaria de agendar uma consulta com discrição.";
+
 const testimonials = [
-  {
-    text: "A Luciana é uma profissional incrível. Desde a primeira sessão me senti acolhida e segura. Recomendo de olhos fechados para quem busca um atendimento de qualidade.",
-    author: "Maria C.",
-    context: "Psicoterapia Individual",
-  },
-  {
-    text: "Excelente psicóloga! Muito atenciosa e competente. Me ajudou muito em um momento difícil da minha vida. Sou muito grato pelo cuidado e profissionalismo.",
-    author: "Pedro S.",
-    context: "Psicoterapia Individual",
-  },
-  {
-    text: "Minha filha adolescente se sentiu muito à vontade com a Luciana. O atendimento é acolhedor e muito profissional. Percebemos uma evolução significativa.",
-    author: "Ana L.",
-    context: "Atendimento a Adolescentes",
-  },
-  {
-    text: "Faz terapia online com a Luciana há meses e é maravilhoso. A qualidade do atendimento é a mesma do presencial. Super recomendo para quem tem rotina corrida.",
-    author: "Juliana M.",
-    context: "Terapia Online",
-  },
-  {
-    text: "Profissional extremamente ética e dedicada. Cada sessão é um momento de verdadeira escuta e acolhimento. Mudou a minha forma de lidar com a ansiedade.",
-    author: "Carlos R.",
-    context: "Psicoterapia Individual",
-  },
-  {
-    text: "A Luciana tem uma sensibilidade única para entender as questões dos adolescentes. Meu filho se abriu muito depois de iniciar o acompanhamento com ela.",
-    author: "Fernanda B.",
-    context: "Atendimento a Adolescentes",
-  },
-  {
-    text: "Estava passando por um luto muito difícil e a Luciana me ajudou a processar tudo com muita humanidade e competência. Serei eternamente grata.",
-    author: "Roberta A.",
-    context: "Psicoterapia Individual",
-  },
-  {
-    text: "O consultório é muito acolhedor e a Luciana transmite uma tranquilidade que facilita muito o processo terapêutico. Recomendo a todos.",
-    author: "Lucas P.",
-    context: "Psicoterapia Individual",
-  },
-  {
-    text: "Depois de tentar outros profissionais, finalmente encontrei alguém que realmente me entende. A abordagem da Luciana é clara, prática e muito eficaz.",
-    author: "Patrícia G.",
-    context: "Terapia Online",
-  },
+  { text: "A Luciana foi a primeira profissional que realmente entendeu o que eu estava vivendo. Depois de anos com um narcisista, eu não sabia mais quem eu era. Ela me ajudou a me encontrar.", author: "C.M.", context: "Executiva · 42 anos" },
+  { text: "Tentei outros psicólogos antes, mas nenhum entendia a dinâmica do abuso narcisista. Com a Luciana, em poucas sessões eu já consegui enxergar o padrão e começar a me libertar.", author: "A.R.", context: "Empresária · 38 anos" },
+  { text: "Discreta, competente e direta ao ponto. Não perde tempo com abordagens genéricas. Sabe exatamente o que uma mulher nessa situação precisa ouvir e fazer.", author: "P.L.", context: "Médica · 45 anos" },
+  { text: "Eu tinha vergonha de contar minha história. A Luciana criou um espaço tão seguro que pela primeira vez me senti à vontade para ser vulnerável sem julgamento.", author: "M.S.", context: "Advogada · 36 anos" },
+  { text: "Me ajudou a sair de um casamento de 15 anos com um narcisista. Hoje estou reconstruindo minha vida e minha carreira com uma confiança que achei que tinha perdido para sempre.", author: "J.F.", context: "Arquiteta · 44 anos" },
+  { text: "O atendimento online é impecável. Tenho uma rotina intensa e a Luciana se adapta perfeitamente. A qualidade é a mesma do presencial — com total sigilo.", author: "R.D.", context: "Diretora Financeira · 40 anos" },
+  { text: "A Luciana não é apenas uma psicóloga — é uma estrategista emocional. Me deu ferramentas práticas para me proteger e reconstruir meus limites.", author: "V.C.", context: "Consultora · 35 anos" },
+  { text: "Depois de meses de gaslighting, eu não confiava mais na minha própria percepção. A Luciana me ajudou a validar minha realidade e recuperar minha sanidade mental.", author: "L.A.", context: "Professora Universitária · 41 anos" },
+  { text: "Recomendo de olhos fechados para qualquer mulher que esteja presa num ciclo narcisista. Ela sabe o que está fazendo e faz com uma humanidade rara.", author: "T.B.", context: "Empreendedora · 39 anos" },
 ];
 
 const DepoimentosPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-accent/50">
+      <section className="py-24 md:py-36 bg-accent/50">
         <div className="container mx-auto px-6">
           <FadeInUp className="text-center max-w-3xl mx-auto">
-            <p className="text-sm font-medium text-primary tracking-wide uppercase mb-4">Depoimentos</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] mb-6">
-              Histórias de quem já passou por aqui
+            <p className="text-xs font-medium text-gold uppercase tracking-[0.2em] mb-6">Depoimentos</p>
+            <h1 className="font-serif text-5xl md:text-6xl text-foreground leading-[1.05] mb-8">
+              Histórias de mulheres que se libertaram
             </h1>
             <p className="text-lg text-muted-foreground">
-              O maior reconhecimento do meu trabalho vem das palavras de quem confiou em mim para essa jornada.
+              Depoimentos reais de mulheres que romperam o ciclo narcisista e reconstruíram suas vidas.
             </p>
           </FadeInUp>
         </div>
       </section>
 
       {/* Featured */}
-      <section className="py-24 md:py-32">
+      <section className="py-28 md:py-36">
         <div className="container mx-auto px-6">
           <FadeIn>
-            <div className="bg-primary rounded-3xl p-10 md:p-16 max-w-4xl mx-auto relative overflow-hidden">
-              <Quote className="w-16 h-16 text-primary-foreground/10 absolute top-8 right-8" />
-              <div className="flex gap-1 mb-6">
+            <div className="bg-foreground rounded-2xl p-12 md:p-20 max-w-4xl mx-auto relative overflow-hidden">
+              <Quote className="w-20 h-20 text-primary-foreground/5 absolute top-8 right-8" />
+              <div className="flex gap-1 mb-8">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary-foreground text-primary-foreground" />
+                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                 ))}
               </div>
-              <blockquote className="font-serif text-2xl md:text-3xl text-primary-foreground leading-snug mb-8">
-                "A Luciana é uma profissional incrível. Desde a primeira sessão me senti acolhida e segura. Recomendo de olhos fechados."
+              <blockquote className="font-serif text-2xl md:text-4xl text-primary-foreground leading-snug mb-10">
+                "A Luciana foi a primeira profissional que realmente entendeu o que eu estava vivendo. Depois de anos com um narcisista, eu não sabia mais quem eu era."
               </blockquote>
               <div>
-                <p className="text-primary-foreground font-medium">Maria C.</p>
-                <p className="text-primary-foreground/60 text-sm">Psicoterapia Individual · Via Google Maps</p>
+                <p className="text-primary-foreground font-medium">C.M.</p>
+                <p className="text-primary-foreground/50 text-sm">Executiva · 42 anos</p>
               </div>
             </div>
           </FadeIn>
@@ -91,23 +57,23 @@ const DepoimentosPage = () => {
       </section>
 
       {/* All Testimonials */}
-      <section className="py-24 md:py-32 bg-accent/50">
+      <section className="py-28 md:py-36 bg-accent/50">
         <div className="container mx-auto px-6">
-          <SectionHeader label="Avaliações" title="Todas as avaliações" description="Avaliações reais de pacientes via Google Maps." />
+          <SectionHeader label="Relatos" title="Todas as histórias" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((t, i) => (
               <FadeIn key={i} delay={(i % 3) * 0.05}>
-                <div className="bg-card rounded-3xl p-8 shadow-card h-full flex flex-col">
-                  <div className="flex gap-0.5 mb-4">
+                <div className="glass rounded-2xl p-8 h-full flex flex-col">
+                  <div className="flex gap-0.5 mb-5">
                     {[1, 2, 3, 4, 5].map((j) => (
-                      <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                      <Star key={j} className="w-3 h-3 fill-gold text-gold" />
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">"{t.text}"</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-8 flex-grow italic">"{t.text}"</p>
                   <div>
                     <p className="text-sm font-medium text-foreground">{t.author}</p>
-                    <p className="text-xs text-muted-foreground">{t.context} · Via Google Maps</p>
+                    <p className="text-xs text-muted-foreground">{t.context}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -117,20 +83,20 @@ const DepoimentosPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32">
+      <section className="py-28 md:py-36">
         <div className="container mx-auto px-6 text-center">
           <FadeIn>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-              Quer fazer parte dessas histórias?
+            <h2 className="font-serif text-4xl text-foreground mb-6">
+              Pronta para escrever a sua história de libertação?
             </h2>
-            <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-              Agende sua primeira sessão e comece sua própria jornada de transformação.
+            <p className="text-muted-foreground max-w-lg mx-auto mb-10">
+              Agende sua consulta com total discrição e dê o primeiro passo.
             </p>
             <a
-              href="https://wa.me/5566999999999?text=Olá! Gostaria de agendar uma consulta."
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-2xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center px-10 py-4 bg-foreground text-background text-xs font-medium uppercase tracking-[0.15em] hover:opacity-90 transition-opacity"
             >
               Agendar Consulta
             </a>

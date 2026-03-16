@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className="pt-16">{children}</main>
+      <main className="pt-20">{children}</main>
       <Footer />
       <WhatsAppButton />
     </>

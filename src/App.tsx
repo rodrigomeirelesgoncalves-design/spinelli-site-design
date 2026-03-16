@@ -9,6 +9,7 @@ import Servicos from "./pages/Servicos";
 import Sobre from "./pages/Sobre";
 import Depoimentos from "./pages/Depoimentos";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/sobre" element={<Layout><Sobre /></Layout>} />
           <Route path="/depoimentos" element={<Layout><Depoimentos /></Layout>} />
           <Route path="/blog" element={<Layout><Blog /></Layout>} />
+          <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
           <Route path="/faq" element={<Layout><FAQ /></Layout>} />
           <Route path="/contato" element={<Layout><Contato /></Layout>} />
           <Route path="*" element={<NotFound />} />

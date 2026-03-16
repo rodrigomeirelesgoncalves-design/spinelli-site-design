@@ -11,10 +11,10 @@ interface Props {
 
 export const FadeIn = ({ children, className, delay = 0 }: Props) => (
   <motion.div
-    initial={{ opacity: 0, y: 12 }}
+    initial={{ opacity: 0, y: 16 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.6, ease, delay }}
+    viewport={{ once: true, margin: "-60px" }}
+    transition={{ duration: 0.8, ease, delay }}
     className={className}
   >
     {children}
@@ -23,9 +23,9 @@ export const FadeIn = ({ children, className, delay = 0 }: Props) => (
 
 export const FadeInUp = ({ children, className, delay = 0 }: Props) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 24 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7, ease, delay }}
+    transition={{ duration: 0.9, ease, delay }}
     className={className}
   >
     {children}
@@ -39,11 +39,11 @@ interface SectionHeaderProps {
 }
 
 export const SectionHeader = ({ label, title, description }: SectionHeaderProps) => (
-  <FadeIn className="text-center mb-16">
-    <p className="text-sm font-medium text-primary tracking-wide uppercase mb-3">
+  <FadeIn className="text-center mb-20">
+    <p className="text-xs font-medium text-gold uppercase tracking-[0.2em] mb-4">
       {label}
     </p>
-    <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+    <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-5">
       {title}
     </h2>
     {description && (
