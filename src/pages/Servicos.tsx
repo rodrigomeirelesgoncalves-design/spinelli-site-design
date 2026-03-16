@@ -1,64 +1,51 @@
-import { Link } from "react-router-dom";
-import { User, Users, Monitor, Brain, HeartHandshake, Lightbulb, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Shield, Sparkles, Heart, CheckCircle2, ArrowRight } from "lucide-react";
+import servicesBg from "@/assets/services-bg.jpg";
 import { FadeIn, FadeInUp, SectionHeader } from "@/components/AnimationUtils";
 
-const mainServices = [
-  {
-    icon: User,
-    title: "Psicoterapia Individual",
-    description: "Processo terapêutico voltado ao autoconhecimento, gestão emocional e superação de desafios pessoais para adultos.",
-    details: [
-      "Ansiedade e estresse",
-      "Depressão e tristeza persistente",
-      "Autoestima e autoconfiança",
-      "Luto e perdas",
-      "Dificuldades nos relacionamentos",
-      "Tomada de decisões",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Atendimento a Adolescentes",
-    description: "Suporte especializado para as transições e desafios próprios da juventude, com acolhimento e escuta qualificada.",
-    details: [
-      "Conflitos familiares",
-      "Dificuldades escolares",
-      "Ansiedade e insegurança",
-      "Identidade e autoconhecimento",
-      "Habilidades sociais",
-      "Orientação vocacional",
-    ],
-  },
-  {
-    icon: Monitor,
-    title: "Terapia Online",
-    description: "A mesma qualidade clínica e ética profissional no conforto e privacidade do seu ambiente, via plataforma segura.",
-    details: [
-      "Plataforma segura e certificada",
-      "Mesma eficácia comprovada",
-      "Flexibilidade de horários",
-      "Atendimento de qualquer lugar",
-      "Sigilo garantido",
-      "Ideal para rotinas corridas",
-    ],
-  },
-];
+const WHATSAPP_URL = "https://wa.me/5566999784828?text=Olá! Gostaria de agendar uma consulta com discrição.";
 
-const approaches = [
+const pillars = [
   {
-    icon: Brain,
-    title: "Terapia Cognitivo-Comportamental",
-    description: "Abordagem baseada em evidências que identifica e modifica padrões de pensamento e comportamento que geram sofrimento.",
+    icon: Shield,
+    title: "Terapia para Vítimas de Narcisistas",
+    focus: "Quebra de vínculo e reconstrução",
+    description: "Abordagem especializada para identificar, compreender e romper o ciclo do abuso narcisista. Trabalhamos a desintoxicação emocional, o fortalecimento da identidade e a retomada do controle sobre sua vida.",
+    methods: [
+      "Identificação de padrões de trauma bonding",
+      "Desconstrução do gaslighting internalizado",
+      "Reconstrução da autoestima e autoconfiança",
+      "Estratégias de no-contact ou low-contact",
+      "Processamento de traumas com TCC",
+      "Proteção emocional e limites saudáveis",
+    ],
   },
   {
-    icon: HeartHandshake,
-    title: "Escuta Ativa e Acolhimento",
-    description: "Um ambiente seguro onde você pode se expressar livremente, sem julgamentos, sendo ouvido com empatia e respeito.",
+    icon: Sparkles,
+    title: "Mentoria para Mulheres Fortes",
+    focus: "Retomada de carreira e brilho",
+    description: "Para mulheres que já romperam o ciclo mas ainda sentem os efeitos: insegurança profissional, dificuldade de confiar, perda de identidade. Ajudo a reconectar com sua força e retomar o protagonismo.",
+    methods: [
+      "Resgate da identidade profissional",
+      "Superação da síndrome da impostora pós-abuso",
+      "Desenvolvimento de liderança autêntica",
+      "Gestão emocional em ambientes de pressão",
+      "Redefinição de metas e propósito de vida",
+      "Fortalecimento da rede de apoio",
+    ],
   },
   {
-    icon: Lightbulb,
-    title: "Psicoeducação",
-    description: "Compreender o que acontece com você é parte fundamental do tratamento. Trabalho com clareza e transparência.",
+    icon: Heart,
+    title: "Consultoria de Relacionamentos",
+    focus: "Prevenção e limites",
+    description: "Identificação de red flags, construção de limites saudáveis e desenvolvimento de habilidades para relacionamentos genuínos. Prevenção para quem não quer repetir padrões.",
+    methods: [
+      "Identificação de padrões de relacionamentos tóxicos",
+      "Construção de limites emocionais saudáveis",
+      "Red flags: como identificar narcisistas",
+      "Comunicação assertiva e não-violenta",
+      "Reconstrução da confiança em novos vínculos",
+      "Autoconhecimento relacional aprofundado",
+    ],
   },
 ];
 
@@ -66,42 +53,47 @@ const ServicosPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-accent/50">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 md:py-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={servicesBg} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-background/85" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <FadeInUp className="text-center max-w-3xl mx-auto">
-            <p className="text-sm font-medium text-primary tracking-wide uppercase mb-4">Serviços</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] mb-6">
-              Cuidado profissional para cada fase da vida
+            <p className="text-xs font-medium text-gold uppercase tracking-[0.2em] mb-6">Especialidades</p>
+            <h1 className="font-serif text-5xl md:text-6xl text-foreground leading-[1.05] mb-8">
+              Três pilares para sua libertação
             </h1>
             <p className="text-lg text-muted-foreground">
-              Ofereço diferentes modalidades de atendimento para atender às suas necessidades de forma personalizada e acolhedora.
+              Cada mulher precisa de uma abordagem sob medida. Minha prática é dividida em três frentes complementares.
             </p>
           </FadeInUp>
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="py-24 md:py-32">
+      {/* Pillars */}
+      <section className="py-28 md:py-40">
         <div className="container mx-auto px-6">
-          <div className="space-y-16 max-w-5xl mx-auto">
-            {mainServices.map((service, i) => (
-              <FadeIn key={service.title} delay={i * 0.05}>
-                <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card">
-                  <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="space-y-20 max-w-5xl mx-auto">
+            {pillars.map((pillar, i) => (
+              <FadeIn key={pillar.title} delay={i * 0.05}>
+                <div className="glass rounded-2xl p-10 md:p-14">
+                  <div className="grid md:grid-cols-2 gap-10 items-start">
                     <div>
-                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                        <service.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+                      <div className="w-16 h-16 rounded-full border border-foreground/10 flex items-center justify-center mb-8">
+                        <pillar.icon className="w-7 h-7 text-foreground" strokeWidth={1} />
                       </div>
-                      <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{service.title}</h2>
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                      <p className="text-xs text-gold uppercase tracking-[0.2em] mb-2">{pillar.focus}</p>
+                      <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">{pillar.title}</h2>
+                      <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground mb-4">Principais demandas atendidas:</p>
-                      <ul className="space-y-2.5">
-                        {service.details.map((detail) => (
-                          <li key={detail} className="flex items-center gap-3 text-sm text-muted-foreground">
-                            <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" strokeWidth={1.5} />
-                            {detail}
+                      <p className="text-xs font-medium text-foreground uppercase tracking-[0.15em] mb-6">Metodologia</p>
+                      <ul className="space-y-3">
+                        {pillar.methods.map((method) => (
+                          <li key={method} className="flex items-start gap-3 text-sm text-muted-foreground">
+                            <CheckCircle2 className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                            {method}
                           </li>
                         ))}
                       </ul>
@@ -114,43 +106,23 @@ const ServicosPage = () => {
         </div>
       </section>
 
-      {/* Approach */}
-      <section className="py-24 md:py-32 bg-accent/50">
-        <div className="container mx-auto px-6">
-          <SectionHeader label="Abordagem" title="Como trabalho" description="Minha prática é fundamentada em métodos validados pela ciência, sempre com foco na individualidade de cada paciente." />
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {approaches.map((item, i) => (
-              <FadeIn key={item.title} delay={i * 0.05}>
-                <div className="bg-card rounded-3xl p-8 shadow-card h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                    <item.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="font-serif text-xl text-foreground mb-3">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-24 md:py-32">
+      <section className="py-28 md:py-40 bg-foreground">
         <div className="container mx-auto px-6">
           <FadeIn>
-            <div className="bg-primary rounded-3xl p-12 md:p-16 text-center max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-primary-foreground mb-4">Vamos começar?</h2>
-              <p className="text-primary-foreground/80 mb-8">
-                Agende sua primeira sessão e dê o primeiro passo rumo ao seu bem-estar emocional.
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-xs font-medium text-gold uppercase tracking-[0.2em] mb-6">Próximo passo</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-primary-foreground mb-6">Vamos começar?</h2>
+              <p className="text-primary-foreground/60 mb-10 max-w-xl mx-auto">
+                Agende sua primeira consulta com total discrição. Presencial ou online.
               </p>
               <a
-                href="https://wa.me/5566999999999?text=Olá! Gostaria de agendar uma consulta."
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-2xl bg-primary-foreground text-primary font-medium hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center px-10 py-4 border border-primary-foreground/30 text-primary-foreground text-xs font-medium uppercase tracking-[0.15em] hover:bg-primary-foreground/10 transition-colors"
               >
-                Agendar Consulta
+                Agendar Consulta Discreta
               </a>
             </div>
           </FadeIn>
