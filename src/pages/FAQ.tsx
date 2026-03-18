@@ -18,7 +18,7 @@ const narcissismFaqs = [
 const therapyFaqs = [
   { question: "Como funciona a primeira sessão?", answer: "A primeira sessão é um espaço de acolhimento total. Vamos conversar sobre sua situação atual, seus objetivos e como posso te ajudar. Não há pressão para compartilhar mais do que se sente confortável. Tudo com total sigilo e discrição." },
   { question: "Quanto tempo dura cada sessão?", answer: "Cada sessão tem duração média de 50 minutos, seguindo o padrão ético e técnico da psicologia clínica." },
-  { question: "O atendimento é presencial ou online?", answer: "Ambos. Atendo presencialmente em Barra do Garças/MT e online para todo o Brasil via plataforma segura. A qualidade e eficácia são as mesmas em ambas as modalidades." },
+  { question: "O atendimento é presencial ou online?", answer: "Ambos. Atendo presencialmente em Água Boa/MT e online para todo o Brasil via plataforma segura. A qualidade e eficácia são as mesmas em ambas as modalidades." },
   { question: "O sigilo é garantido?", answer: "Absolutamente. O sigilo profissional é um dos pilares da ética em Psicologia e é garantido por lei. Seu caso é tratado com total confidencialidade e discrição." },
 ];
 

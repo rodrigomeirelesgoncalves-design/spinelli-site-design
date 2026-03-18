@@ -45,7 +45,7 @@ const Footer = () => (
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-sm opacity-50">
               <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-              <span>Barra do Garças — MT</span>
+              <span>R. 3 — Água Boa, MT, 78635-000</span>
             </div>
             <div className="flex items-center gap-3 text-sm opacity-50">
               <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />

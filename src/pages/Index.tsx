@@ -42,7 +42,7 @@ const differentials = [
 const testimonials = [
   { text: "Finalmente encontrei alguém que entende o que eu passei. A Luciana mudou minha vida.", author: "C.M.", context: "Executiva · São Paulo" },
   { text: "Me ajudou a sair de um casamento de 15 anos com um narcisista. Estou reconstruindo minha vida.", author: "A.R.", context: "Empresária · Goiânia" },
-  { text: "Discreta, competente e direta. Exatamente o que eu precisava. Recomendo fortemente.", author: "P.L.", context: "Médica · Barra do Garças" },
+  { text: "Discreta, competente e direta. Exatamente o que eu precisava. Recomendo fortemente.", author: "P.L.", context: "Médica · Água Boa" },
 ];
 
 const Index = () => {
