@@ -19,24 +19,30 @@ const SobrePage = () => {
               </h1>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p className="text-lg font-serif italic text-foreground leading-snug">
-                  "O mercado está cheio de terapeutas generalistas. Mas poucas profissionais 
-                  realmente entendem a dinâmica do abuso narcisista — e ainda menos sabem 
-                  como tratar mulheres de alto desempenho que passaram por isso."
+                  "Acredito que o autoconhecimento é uma escolha que transforma destinos — 
+                  e é nesse encontro entre o humano e o profissional que minha atuação ganha sentido."
                 </p>
                 <p>
-                  Sou psicóloga clínica registrada no CRP 18/03885, com formação em
-                  Psicologia e especialização em Terapia Cognitivo-Comportamental (TCC).
-                  Ao longo da minha carreira, me especializei em casos complexos de abuso
-                  emocional e relacionamentos com personalidades narcisistas.
+                  Sou psicóloga, formada pela Universidade Estadual de Minas Gerais em 2003, 
+                  registrada no CRP 18/03885, e desde então transformo minha dedicação ao 
+                  cuidado humano em propósito.
                 </p>
                 <p>
-                  Minha missão é clara: ajudar mulheres bem-sucedidas a recuperarem
-                  sua identidade, sua confiança e sua liberdade emocional. Sem julgamentos.
-                  Com técnica, estratégia e total discrição.
+                  Minha própria trajetória, marcada por aprendizados e construção consciente, 
+                  sustenta o trabalho que realizo hoje: ajudar mulheres fortes e bem-sucedidas 
+                  a se libertarem de relacionamentos amorosos com homens narcisistas, com 
+                  profundidade, ética e responsabilidade.
                 </p>
                 <p>
-                  Atuo em Barra do Garças/MT e por atendimento online para todo o Brasil,
-                  oferecendo um espaço de escuta ativa, segurança e transformação genuína.
+                  Sou casada há 21 anos, construindo diariamente uma relação saudável, e mãe 
+                  de dois meninos que são parte essencial da minha história. Nos detalhes da vida, 
+                  encontro equilíbrio: cozinhar, pescar, cuidar dos meus pets e das minhas plantas.
+                </p>
+                <p>
+                  Mais do que uma profissão, meu trabalho é um compromisso com relações mais 
+                  conscientes, leves e verdadeiras. Atuo em Água Boa/MT e por atendimento 
+                  online para todo o Brasil, oferecendo um espaço de escuta ativa, segurança 
+                  e transformação genuína.
                 </p>
               </div>
 
@@ -47,7 +53,7 @@ const SobrePage = () => {
                 </div>
                 <div className="flex items-center gap-2 px-5 py-2.5 border border-foreground/10 text-xs text-foreground uppercase tracking-wider">
                   <GraduationCap className="w-4 h-4 text-gold" strokeWidth={1.5} />
-                  Especialista em TCC
+                  UEMG · 2003
                 </div>
               </div>
             </FadeInUp>
@@ -78,7 +84,7 @@ const SobrePage = () => {
               </h2>
               <div className="space-y-6 text-primary-foreground/70 text-left md:text-center">
                 <p>
-                  Ao longo dos meus anos de prática clínica, percebi um padrão alarmante: mulheres 
+                  Ao longo dos meus mais de 20 anos de prática clínica, percebi um padrão alarmante: mulheres 
                   incrivelmente competentes e bem-sucedidas chegavam ao meu consultório 
                   emocionalmente destruídas por relacionamentos abusivos com personalidades narcisistas.
                 </p>
@@ -120,7 +126,7 @@ const SobrePage = () => {
           <FadeIn>
             <h2 className="font-serif text-4xl text-foreground mb-6">Pronta para começar?</h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-10">
-              Agende sua consulta com total discrição. Presencial em Barra do Garças/MT ou online para todo o Brasil.
+              Agende sua consulta com total discrição. Presencial em Água Boa/MT ou online para todo o Brasil.
             </p>
             <a
               href={WHATSAPP_URL}

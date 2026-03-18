@@ -113,7 +113,7 @@ const ContatoPage = () => {
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                      <p className="text-sm text-muted-foreground">Barra do Garças — MT</p>
+                      <p className="text-sm text-muted-foreground">R. 3 — Água Boa, MT, 78635-000</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <Clock className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" strokeWidth={1.5} />
