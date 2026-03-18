@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import { FadeIn, FadeInUp } from "@/components/AnimationUtils";
+import { FadeIn, FadeInUp, SectionHeader } from "@/components/AnimationUtils";
 import { blogArticles, getWhatsappLink } from "@/data/blogArticles";
 import { getBlogImage } from "@/data/blogImages";
 
